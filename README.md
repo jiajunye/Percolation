@@ -8,3 +8,8 @@ A Java program to estimate the value of the percolation threshold via Monte Carl
 <li>Perform a series of computational experiments, calculated mean and standard deviation of percolation threshold.</li>
 <li>Implemented PercolationVisualizer class to take text files as inputs to draw pixel images dynamically by utilizing percolation system.</li>
 </ul>
+<p>
+Download the zip file. Extract and open all .java files in src directory using an IDE (eclipse, Xcode, etc).<br><br>
+Compile and run PercolationStats to calculate mean and standard deviation of percolation threshold.<br><br>
+Choose text file from draw directory to be the input file for PercolationVisualizer main method. Compile and run PercolationVisualizer to draw pixel images dynamically.
+</p>
