@@ -24,23 +24,26 @@ public class WeightedQuickUnionUF
         }
     }
 	
-	public int find(int i)  //find the root of i
+	// find the root of i
+	public int find(int i)
 	{
 		validate(i);
-		while(i != id[i]) i = id[i];  //id[i] == i means reached the root
-		return i;  //return i's root
+		while(i != id[i]) i = id[i];  // id[i] == i means reached the root
+		return i;  // return i's root
 	}
 	
-	public boolean connected(int p, int q)  //check if p's root is the same as q's root, if so, they are connected
+	// check if p's root is the same as q's root, if so, they are connected
+	public boolean connected(int p, int q)
 	{
 		return find(p) == find(q);
 	}
 	
-	public void union(int p, int q)  //connect the smaller tree's root to the bigger tree's root, then update the size of the new tree
+	// connect the smaller tree's root to the bigger tree's root, then update the size of the new tree
+	public void union(int p, int q)
 	{
 		int i = find(p); 
 		int j = find(q);
-		if(i == j) return;  //if the roots of i and j are same, means they are already connected
+		if(i == j) return;  // if the roots of i and j are same, means they are already connected
 		if(sz[i] < sz[j]) {id[i] = j; sz[j] += sz[i];}
 		else {id[j] = i; sz[i] += sz[j];}
 	}
